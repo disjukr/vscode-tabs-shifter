@@ -1,0 +1,42 @@
+{
+  "name": "tabs-shifter",
+  "displayName": "Tabs Shifter",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tabsShifter.clearCache",
+        "title": "Tabs Shifter: Clear Cache"
+      },
+      {
+        "command": "tabsShifter.shiftToNext",
+        "title": "Tabs Shifter: Shift To Next"
+      },
+      {
+        "command": "tabsShifter.shiftToPrev",
+        "title": "Tabs Shifter: Shift To Prev"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.88.0",
+    "typescript": "^5.4.4"
+  }
+}
